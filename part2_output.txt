@@ -1,0 +1,167 @@
+(venv) axr220242@amulya:~$ spark-submit pyspark_search_engine.py
+26/09/25 10:28:23 WARN Utils: Your hostname, amulya resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+26/09/25 10:28:23 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/09/25 10:28:26 INFO SparkContext: Running Spark version 3.5.4
+26/09/25 10:28:26 INFO SparkContext: OS info Linux, 6.6.87.2-microsoft-standard-WSL2, amd64
+26/09/25 10:28:26 INFO SparkContext: Java version 21.0.12.1
+26/09/25 10:28:26 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/09/25 10:28:26 INFO ResourceUtils: ==============================================================
+26/09/25 10:28:26 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/09/25 10:28:26 INFO ResourceUtils: ==============================================================
+26/09/25 10:28:26 INFO SparkContext: Submitted application: MovieSearch
+26/09/25 10:28:26 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/09/25 10:28:26 INFO ResourceProfile: Limiting resource is cpu
+26/09/25 10:28:26 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/09/25 10:28:26 INFO SecurityManager: Changing view acls to: axr220242
+26/09/25 10:28:26 INFO SecurityManager: Changing modify acls to: axr220242
+26/09/25 10:28:26 INFO SecurityManager: Changing view acls groups to:
+26/09/25 10:28:26 INFO SecurityManager: Changing modify acls groups to:
+26/09/25 10:28:26 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: axr220242; groups with view permissions: EMPTY; users with modify permissions: axr220242; groups with modify permissions: EMPTY
+26/09/25 10:28:27 INFO Utils: Successfully started service 'sparkDriver' on port 35781.
+26/09/25 10:28:27 INFO SparkEnv: Registering MapOutputTracker
+26/09/25 10:28:27 INFO SparkEnv: Registering BlockManagerMaster
+26/09/25 10:28:27 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/09/25 10:28:27 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/09/25 10:28:27 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/09/25 10:28:27 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-1b851b70-cba2-490e-95cb-9d0843a78f47
+26/09/25 10:28:27 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+26/09/25 10:28:27 INFO SparkEnv: Registering OutputCommitCoordinator
+26/09/25 10:28:27 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/09/25 10:28:27 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/09/25 10:28:27 INFO Executor: Starting executor ID driver on host 10.255.255.254
+26/09/25 10:28:27 INFO Executor: OS info Linux, 6.6.87.2-microsoft-standard-WSL2, amd64
+26/09/25 10:28:27 INFO Executor: Java version 21.0.12.1
+26/09/25 10:28:27 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/09/25 10:28:27 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@7ece6e92 for default.
+26/09/25 10:28:27 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 35337.
+26/09/25 10:28:27 INFO NettyBlockTransferService: Server created on 10.255.255.254:35337
+26/09/25 10:28:27 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/09/25 10:28:27 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.255.255.254, 35337, None)
+26/09/25 10:28:27 INFO BlockManagerMasterEndpoint: Registering block manager 10.255.255.254:35337 with 434.4 MiB RAM, BlockManagerId(driver, 10.255.255.254, 35337, None)
+26/09/25 10:28:27 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.255.255.254, 35337, None)
+26/09/25 10:28:27 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.255.255.254, 35337, None)
+
+==================================================
+SEARCH RESULTS
+==================================================
+
+>>> Query: 'dallas'
+   1. Modern Vampires - Score: 65.86804
+   2. Beavis and Butt-head Do America - Score: 28.98194
+   3. Stagecoach - Score: 23.71249
+   4. Dallas 362 - Score: 23.71249
+   5. Magic Mike - Score: 15.80833
+   6. Thursday - Score: 15.80833
+   7. Frequent Flyer - Score: 13.17361
+   8. Smokey and the Bandit II - Score: 10.53889
+   9. Pumpkinhead 4: Blood Feud - Score: 10.53889
+  10. So Big - Score: 10.53889
+
+>>> Query: 'space'
+   1. Gunbuster - Score: 28.49394
+   2. Message from Space - Score: 21.78948
+   3. Zenon: Girl of the 21st Century - Score: 18.43726
+   4. Ice Planet - Score: 16.76114
+   5. Robotech: The Shadow Chronicles - Score: 16.76114
+   6. Star Pink - Score: 15.08503
+   7. Kaizoku Sentai Gokaiger vs. Space Sheriff Gavan: The Movie - Score: 15.08503
+   8. Ultramarines: The Movie - Score: 13.40891
+   9. Conquest of Space - Score: 13.40891
+  10. Way...Way Out - Score: 13.40891
+
+>>> Query: 'alien'
+   1. Species II - Score: 40.11414
+   2. The Hidden - Score: 32.47336
+   3. Bad Taste - Score: 28.65296
+   4. The Darkest Hour - Score: 28.65296
+   5. Alien 51 - Score: 26.74276
+   6. Evil Aliens - Score: 24.83257
+   7. The Tommyknockers - Score: 22.92237
+   8. Battleship - Score: 22.92237
+   9. E.T. the Extra-Terrestrial - Score: 22.92237
+  10. Alien vs. Hunter - Score: 21.01217
+
+>>> Query: 'detective'
+   1. Number Seventeen - Score: 35.96586
+   2. Detective K: Secret of the Virtuous Widow - Score: 19.48151
+   3. Detectives on the Edge of a Nervous Breakdown - Score: 16.48435
+   4. Blind - Score: 14.98578
+   5. What's Your Raashee? - Score: 14.98578
+   6. Case Closed: The Fourteenth Target - Score: 11.98862
+   7. Baadshah - Score: 11.98862
+   8. The Drifter - Score: 10.49004
+   9. Case Closed: Captured in Her Eyes - Score: 10.49004
+  10. Let Me In - Score: 10.49004
+
+>>> Query: 'comedy'
+   1. Talkin' Dirty After Dark - Score: 7.50709
+   2. Where the Truth Lies - Score: 7.50709
+   3. Hollywood Outlaw Movie - Score: 7.50709
+   4. Thousands Cheer - Score: 5.63032
+   5. Mahaul Theek Hai - Score: 5.63032
+   6. When Stand Up Stood Out - Score: 5.63032
+   7. Punchline - Score: 5.63032
+   8. Light Up the Sky! - Score: 3.75355
+   9. Näköradiomiehen ihmeelliset siekailut - Score: 3.75355
+  10. Hacks - Score: 3.75355
+
+>>> Query: 'james bond movie shot in russia'
+   1. You Only Live Twice - Cosine Sim: 0.30829
+   2. Dr. No - Cosine Sim: 0.30282
+   3. Quantum of Solace - Cosine Sim: 0.30016
+   4. Third Star - Cosine Sim: 0.27137
+   5. Unknown - Cosine Sim: 0.26901
+   6. Ratcatcher - Cosine Sim: 0.26506
+   7. Thunderball - Cosine Sim: 0.25318
+   8. On Her Majesty's Secret Service - Cosine Sim: 0.25122
+   9. The World Is Not Enough - Cosine Sim: 0.25055
+  10. For Your Eyes Only - Cosine Sim: 0.24521
+
+>>> Query: 'funny movie with action scenes'
+   1. Action Man: Robot Atak - Cosine Sim: 0.23050
+   2. The Major Lied 'Til Dawn - Cosine Sim: 0.21777
+   3. Lu and Bun - Cosine Sim: 0.19981
+   4. Funny Man - Cosine Sim: 0.19978
+   5. The Daredevil Men - Cosine Sim: 0.19787
+   6. Aanaval mothiram - Cosine Sim: 0.17155
+   7. Il bidone - Cosine Sim: 0.13922
+   8. Om - Cosine Sim: 0.13895
+   9. Bamunan - Cosine Sim: 0.13662
+  10. Legend of the Golden Pearl - Cosine Sim: 0.13332
+
+>>> Query: 'space adventure starship'
+   1. Xenogenesis - Cosine Sim: 0.32423
+   2. Star Pink - Cosine Sim: 0.17729
+   3. Pereval - Cosine Sim: 0.17067
+   4. Retour à l'aube - Cosine Sim: 0.15617
+   5. Space Specks - Cosine Sim: 0.14959
+   6. One Small Step: The Story of the Space Chimps - Cosine Sim: 0.14844
+   7. ChilePuede - Cosine Sim: 0.14084
+   8. Moscow-Cassiopeia - Cosine Sim: 0.13964
+   9. O-Solar Meow - Cosine Sim: 0.13906
+  10. Blackie & Kanuto - Cosine Sim: 0.13418
+
+>>> Query: 'romantic comedy in Paris'
+   1. Blind Love - Cosine Sim: 0.37823
+   2. Loop - Cosine Sim: 0.31343
+   3. I Was a Teenage Zombie - Cosine Sim: 0.31124
+   4. The Boy Friend - Cosine Sim: 0.28404
+   5. Chatham - Cosine Sim: 0.26791
+   6. Talkin' Dirty After Dark - Cosine Sim: 0.26783
+   7. Made in Paris - Cosine Sim: 0.22593
+   8. A Perfect Ending - Cosine Sim: 0.22309
+   9. The Moon's Our Home - Cosine Sim: 0.21583
+  10. On the Beat - Cosine Sim: 0.20087
+
+>>> Query: 'detective solving a murder mystery'
+   1. Three Steps in the Dark - Cosine Sim: 0.38891
+   2. True Crime - Cosine Sim: 0.33991
+   3. Firehouse - Cosine Sim: 0.25949
+   4. Mystery Team - Cosine Sim: 0.25647
+   5. My Favorite Brunette - Cosine Sim: 0.22093
+   6. Anu - Cosine Sim: 0.22051
+   7. Tintorettor Jishu - Cosine Sim: 0.20999
+   8. Follow Me! - Cosine Sim: 0.19920
+   9. Hotel Chelsea - Cosine Sim: 0.19488
+  10. Detective K: Secret of the Virtuous Widow - Cosine Sim: 0.18707
+(venv) axr220242@amulya:~$
