@@ -8,15 +8,13 @@ Creating and activating venv:
 python3 -m venv venv
 source venv/bin/activate
 
-Necessary files (Already in folder):
+Necessary files:
 wget.download("https://www.gutenberg.org/files/1661/1661-0.txt","book.txt")
 wget http://www.cs.cmu.edu/~ark/personas/data/MovieSummaries.tar.gz
 tar -xzf MovieSummaries.tar.gz
 
-Running Parts 1 and 2
-spark-submit pyspark_word_count.py
+Running Parts 
 spark-submit pyspark_search_engine.py
 
-Output Files are included in folder:
-part1_output.txt
+Output File(included in folder):
 part2_output.txt
